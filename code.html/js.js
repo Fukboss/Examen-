@@ -4,7 +4,7 @@ const URL= ' https://wizard-world-api.herokuapp.com';
 window.onload = async () => {
 
     const personatjes = await getAllpersonatjes();
-  
+    //const ElixirsS= await getAllElixirs();
 
   
     for (const personatje of personatjes) {
@@ -12,14 +12,16 @@ window.onload = async () => {
       const newElement = document.createElement('div');
       newElement.innerHTML = `
         <h2>${personatje.firstName}</h2>
+        
       `;
       mainHtmlElement.appendChild(newElement);
     }
+   
   };
   
   async function getAllpersonatjes() {
     const response = await fetch(`${URL}/Wizards`);
     const data = await response.json();
-debugger;
-    return data.Array;
+    return data;
   }
+  
