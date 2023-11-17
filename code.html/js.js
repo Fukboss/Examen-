@@ -20,6 +20,6 @@ window.onload = async () => {
   async function getAllpersonatjes() {
     const response = await fetch(`${URL}/Wizards`);
     const data = await response.json();
-   
+debugger;
     return data.Array;
   }
