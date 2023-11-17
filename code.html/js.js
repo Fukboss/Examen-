@@ -29,8 +29,8 @@ window.onload = async () => {
         
       `;
       mainHtmlElements.appendChild(newElements);
-      const boton=document.getElementById('${Elixir.name}');
-      boton.addEventListener('click', elixirclicat());
+      //const boton=document.getElementById('${Elixir.name}');
+      //boton.addEventListener('click', elixirclicat());
 
       }
       
@@ -63,11 +63,5 @@ window.onload = async () => {
 
   
 };
-async function getAllElixirs() {
-    const response = await fetch(`${URL}/Elixirs`);
-    const data = await response.json();
-    return data;
-  }
-
 
   
