@@ -1,24 +1,25 @@
-const URL= ' https://wizard-world-api.herokuapp.com/Wizards';
+const URL= ' https://wizard-world-api.herokuapp.com';
 
 
 window.onload = async () => {
 
-    const films = await getAllStarWarsFilms();
+    const personatjes = await getAllpersonatjes();
   
 
   
-    for (const film of films) {
+    for (const personatje of personatjes) {
       const mainHtmlElement = document.getElementById('main');
       const newElement = document.createElement('div');
       newElement.innerHTML = `
-        <h2>${film}</h2>
+        <h2>${personatje.firstName}</h2>
       `;
       mainHtmlElement.appendChild(newElement);
     }
   };
   
-  async function getAllStarWarsFilms() {
-    const response = await fetch(`${URL}/name`);
+  async function getAllpersonatjes() {
+    const response = await fetch(`${URL}/Wizards`);
     const data = await response.json();
-    return data.results;
+   
+    return data.Array;
   }
