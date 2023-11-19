@@ -1,0 +1,155 @@
+
+
+.floatingwindow {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .floatingwindow.active {
+    display: block;
+  }
+/* ___________________________________________________________________________________________________________ */
+
+div.destacar{
+    font-size: 100px;
+}
+body{
+    text-align: center;
+}
+
+
+
+
+/* h1.PR{
+    color: red;
+} */
+h2.personatje{
+    color: rgb(28, 28, 228);
+    font-size: 50px;
+}
+
+/* _____________________________________________________________ */
+div.casas {
+    display: grid;
+    grid-template-columns: 2fr 2fr; 
+    gap: 10px; 
+    width: 100%;
+    background-color: transparent;
+    align-items: center;
+}
+
+
+div.casas > div {
+   width: 100%;
+   
+} 
+
+.Gryffindor {
+    background-image: url(/gryffindor.jpg);
+    background-size: auto 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+   
+}
+
+.Ravenclaw {
+    background-image: url(/ravenclaw.jpg);
+    background-size: auto 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+.Hufflepuff {
+    background-image: url(/hufflepuff.jpg);
+    background-size: auto 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Slytherin {
+    background-image: url(/slytherin.jpg);
+    background-size: auto 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+.Gryffindor > h1 {
+    background: transparent;
+    font-size: 30px;
+     
+}
+.Gryffindor > h2 {
+  
+    background: transparent;
+    font-size: 15px;
+}
+.Ravenclaw > h1 {
+    background: transparent;
+    font-size: 30px;
+}
+.Ravenclaw > h2 {
+    font-size: 15px;
+    background: transparent;
+}
+.Hufflepuff > h1 {
+    background: transparent;
+    font-size: 30px;
+}
+.Hufflepuff > h2 {
+    background: transparent;
+    font-size: 15px;
+}
+.Slytherin > h1 {
+    background: transparent;
+    font-size: 30px;
+}
+.Slytherin > h2 {
+    background: transparent;
+    font-size: 15px;
+}
+
+p{
+    color: rgb(212, 152, 78);
+}
+div.personatje{
+    margin-top: 10px;
+    margin-bottom: 1000px;
+    
+}
+
+
+@media screen and (max-width: 700px) {
+    div.casas {
+        display: grid;
+        grid-template-columns: 1fr; /* Una fila con cuatro columnas */
+        gap: 10px; 
+        width: 300px;
+        height: 500px;
+        background-color: transparent;
+        margin-bottom: 2200px;
+    }
+    h1{
+        width: 100%;
+        font-size: larger;
+    }
+    h1{
+        width: 100%;
+        font-size: larger;
+    }
+    h2{
+        width: 100%;
+        font-size: larger;
+    }
+    
+}
