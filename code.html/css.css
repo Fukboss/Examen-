@@ -82,7 +82,7 @@ div.casas {
     background-color: transparent;
     align-items: center;
     border-top: 2px solid purple; 
- color: rgb(105, 206, 42);
+ color: rgb(183, 0, 0);
  margin-bottom: 530px;
 }
 
@@ -102,6 +102,7 @@ div.casas > div {
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
+    opacity: 0.7;
     
     
    
@@ -113,6 +114,7 @@ div.casas > div {
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
+    opacity: 0.7;
    
 }
 
@@ -122,6 +124,7 @@ div.casas > div {
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
+    opacity: 0.7;
 }
 
 .Slytherin {
@@ -130,30 +133,41 @@ div.casas > div {
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
+    opacity: 0.7;
    
 }
 
 .Gryffindor > h1 {
     background: transparent;
     font-size: 30px;
+    height: 200px; 
+  line-height: 200px;
+  opacity: 0.7;
      
 }
 .Gryffindor > h2 {
   
     background: transparent;
     font-size: 15px;
+    
 }
 .Ravenclaw > h1 {
     background: transparent;
     font-size: 30px;
+    height: 200px; 
+    line-height: 200px
 }
 .Ravenclaw > h2 {
     font-size: 15px;
     background: transparent;
+
 }
 .Hufflepuff > h1 {
     background: transparent;
     font-size: 30px;
+    height: 200px; 
+    line-height: 200px;
+    
 }
 .Hufflepuff > h2 {
     background: transparent;
@@ -162,6 +176,8 @@ div.casas > div {
 .Slytherin > h1 {
     background: transparent;
     font-size: 30px;
+    height: 200px; 
+    line-height: 200px
 }
 .Slytherin > h2 {
     background: transparent;
@@ -192,6 +208,33 @@ div.personatje{
 }
 div.pers{
     text-align: center;
+}
+h2.tituloH{
+    text-align: center;
+}
+footer{
+   
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+h5{
+    font-size: 24px;
+    text-align:center ;
+}
+h5.h5{
+    border-bottom: 3px solid violet;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid white;
+
 }
 
 

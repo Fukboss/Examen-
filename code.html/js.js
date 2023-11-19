@@ -8,7 +8,9 @@ window.onload = async () => {
   const Nox=document.getElementById("Nox");
   const Lumos=document.getElementById("Lumos");
   const Orchideous=document.getElementById("Orchideous");
-  const Alarte=document.getElementById("Freezing Charm")
+  const Alarte=document.getElementById("Freezing Charm");
+  const cerdo=document.getElementById('botonSonido')
+  
   
   const quitarTextoBtn = document.getElementById('quitarTextoBtn');
 
@@ -21,6 +23,12 @@ window.onload = async () => {
       this.textContent="Evanesco";
     }
   });
+
+  cerdo.addEventListener('click', reproducirSonido);
+  function reproducirSonido() {
+    var audio = new Audio('/cerdo.mp3');
+    audio.play();
+}
   
   for (const personatje of personatjes) {
     const mainHtmlElement = document.getElementById('main');
@@ -50,7 +58,8 @@ window.onload = async () => {
     newCasa.className = `${casa.name}`;
     newCasa.innerHTML = `
         <h1 class="${casa.name}">${casa.name}</h1>
-        <h2 class="${casa.name}">habitación principal ${casa.commonRoom}</h2>
+        <h2 class="${casa.name}">habitación principal: ${casa.commonRoom}</h2>
+        <h2 class="${casa.name}">fundador: ${casa.founder}</h2>
         <button id="openBtn" onclick="destacarC('${casa.id}')"> Destacar </button>
         
         
