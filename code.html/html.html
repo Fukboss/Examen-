@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js.js"></script>
+    <link rel="shortcut icon" href="/imagen.png" type="image/x-icon">
     <link rel="stylesheet" href="css.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+
+<body class="titulo" id="body">
     <div class="personatjes" id="personatjes">
-        <h1>Harry poter </h1>
-        <!-- _________________________________________________________ -->
+        <h1 class="harry">Harry poter </h1>
+        <p class="finestra">(Pulsa el boto si vols obrir la finestra flotant)</p>
         <button id="openBtn">Abrir lista favoritos</button>
-  
-  <div  id="floatingWindow" class="floatingwindow">
-      <h2>DESTACATS</h2>
-      <div class="personatje_preferit" id="personatje_preferitt">Personatje:</div>
-        <div class="casa_preferida" id="casa_preferida" >Casa:</div>
-      <button id="closeBtn">Close</button>
-  </div>
-    <!-- ____________________________________________________________ -->
+
+
+        <div id="floatingWindow" class="floatingwindow">
+            <h2>DESTACATS</h2>
+            <div class="personatje_preferit" id="personatje_preferitt">Personatje:</div>
+            <div class="casa_preferida" id="casa_preferida">Casa:</div>
+            <button id="closeBtn">Close</button>
+        </div>
+        <!-- ____________________________________________________________ -->
         <div id="main">
         </div>
         <div class="mainn">
         </div>
     </div>
-    
-   
-
     <div class="pers" id="pers">
         <h1 class="PR">Personatje destacat</h1>
         <div id="personatje_preferit"> </div>
     </div>
-            <div id="casas" class="casas"></div>
-            <h1 class="PR" >Escoles Preferides</h1>
-            <div class="destacar" id="destacar"></div>
-            
-        
- </body>
- 
- 
+    <div id="casas" class="casas"></div>
+    <h1 class="PR">Escoles Preferides</h1>
+    <div class="destacar" id="destacar"></div>
+
+    <div class="spells">
+        <h1 id="echizos" class="echizos">Hechizos</h1>
+        <div class="Thechizos" id="Thechizos"> </div>
+        <h2 class="tituloH" id="tituloH">Funciones de los Hechizos</h2>
+        <div id="botonsE" class="botonsE">
+            <button id="Nox" class="Nox">Nox</button>
+            <button id="Lumos" class="Lumos"> Lumos</button>
+            <button id="Orchideous" class="Orchideous"> Orchideous</button>
+            <button class="Freezing Charm" id="Freezing Charm">Freezing Charm</button>
+            <button id="quitarTextoBtn">Evanesco</button>
+        </div>
+    </div>
+
+</body>
+
+
 </html>

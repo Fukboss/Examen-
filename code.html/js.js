@@ -2,13 +2,26 @@ const URL = ' https://wizard-world-api.herokuapp.com';
 
 
 window.onload = async () => {
-  //const boton=document.getElementById('button');
-  //boton.addEventListener('click', elixirclicat(id));
   const personatjes = await getAllpersonatjes();
   const casas = await getAllCasas();
-  //const ElixirsS= await getAllElixirs();
- 
+  const Spells= await getAllSpells();
+  const Nox=document.getElementById("Nox");
+  const Lumos=document.getElementById("Lumos");
+  const Orchideous=document.getElementById("Orchideous");
+  const Alarte=document.getElementById("Freezing Charm")
+  
+  const quitarTextoBtn = document.getElementById('quitarTextoBtn');
 
+  quitarTextoBtn.addEventListener('click', function () {
+    if(quitarTextoBtn.textContent==="Evanesco"){
+    document.getElementById('Thechizos').style.display = 'none';
+    this.textContent="Accio";}
+    else{
+      document.getElementById('Thechizos').style.display = 'flex';
+      this.textContent="Evanesco";
+    }
+  });
+  
   for (const personatje of personatjes) {
     const mainHtmlElement = document.getElementById('main');
     const newElement = document.createElement('div');
@@ -22,10 +35,10 @@ window.onload = async () => {
     for (const Elixir of personatje.elixirs) {
       const newElements = document.createElement('div');
       newElements.innerHTML = `
-          <h3>${Elixir.name}</h3>
-          <button oncli ck="verIngredientes('${Elixir.id}')"> ingredients </button>
-          <div id="${Elixir.id}"></div>
-        `;
+      <h3>${Elixir.name}</h3>
+      <button onclick="verIngredientes('${Elixir.id}')">ingredients</button>
+      <div id="${Elixir.id}"></div>
+  `;
 
       mainHtmlElement.appendChild(newElements);
     }
@@ -55,9 +68,53 @@ window.onload = async () => {
     document.getElementById('floatingWindow').classList.remove('active');
   });
   
+
+// Part dels encanteris
+for (const spell of Spells) {
+  const divE = document.getElementById("Thechizos");
+  const newCasa = document.createElement("div");
+  newCasa.innerHTML = `<p class="echiS">${spell.name} </p>
+  `;
+  divE.appendChild(newCasa);
+}
+Nox.addEventListener('click',ExecNux);
+Lumos.addEventListener('click',ExecLumos);
+Orchideous.addEventListener('click',ExcOrchideous);
+Alarte.addEventListener('click', ExcAlert);
+function ExcAlert(){
+  alert('💋💋💋💋🥶🥶🥶🥶🥶🥶');
+
+}
+function regresar() {
+  document.body.style.backgroundColor = ""; 
+}
+function ExecNux(e) {
+  e.preventDefault();
+  document.body.style.backgroundColor = "grey"; 
+setTimeout(regresar, 5000);  
+}
+function ExecLumos(e) {
+  e.preventDefault();
+  document.body.style.backgroundColor = "rgba(255, 248, 33, 0.558)"; 
+setTimeout(regresar, 5000);  
+}
+function ExcOrchideous(e) {
+  e.preventDefault();
+  document.body.style.background=" url(/florv2.jpg)";
+setTimeout(regresar, 5000);  
+}
+function regresar() {
+  document.body.style.background="";
+
+}
+
 };
 
-//________________________________________________________
+
+
+
+
+
 async function destacarC(id) {
   const response = await getNombreC(id);
   const ingg=document.getElementById("destacar")
@@ -68,52 +125,41 @@ async function destacarC(id) {
   ingg.innerHTML = '';
   ingg.innerHTML = `<p>${response.name} </p>
   `;
-  // ing.appendChild(per);
-  // ingg.appendChild(per);
- 
-// ________________________________________________
-
+  
 
 }
 
-//______________________________________________________________
+
 async function destacar(id) {
   const response = await getNombre(id);
   const ingg=document.getElementById("personatje_preferitt")
   const ing = document.getElementById("personatje_preferit");
   
   ing.innerHTML = '';
-  ing.innerHTML = `<p>${response.firstName} </p>
-  <p>${response.lastName} </p>
+  ing.innerHTML = `<p>${response.firstName} ${response.lastName}</p>
+  
   `;
   ingg.innerHTML = '';
-  ingg.innerHTML = `<p>${response.firstName} </p> <p>${response.lastName} </p>
+  ingg.innerHTML = `<p>${response.firstName} ${response.lastName}</p>
   `;
 
-   ing.appendChild(per);
-  // ingg.appendChild(per);
   
-  //_________________________________________________
 }
-//_________________________________________________
+
 
 async function verIngredientes(id) {
   const responses = await getAllElixirs(id);
   const ing = document.getElementById(id);
-  
-  ing.innerHTML = '';
+  ing.innerHTML = '';  
   for (const ingredient of responses) {
-    const ingredientE = document.createElement("div");
-    ingredientE.innerHTML = `
-          <p> ${ingredient.name} </p>
-          `;
-    ing.appendChild(ingredientE);
-   
+    const newIngredient = document.createElement('p');
+    newIngredient.className = 'ingredients';
+    newIngredient.textContent = ingredient.name;
+    ing.appendChild(newIngredient);
   }
- 
 }
 
-//___________________________________________________________________
+
 
 async function getAllpersonatjes() {
   const response = await fetch(`${URL}/Wizards`);
@@ -140,6 +186,13 @@ async function getNombre(id) {
 
 async function getNombreC(id) {
   const response = await fetch(`${URL}/Houses/${id}`);
+  const data = await response.json();
+  return data;
+
+
+}
+async function getAllSpells() {
+  const response = await fetch(`${URL}/Spells`);
   const data = await response.json();
   return data;
 

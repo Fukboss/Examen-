@@ -1,37 +1,74 @@
 
+.personatjes > h1{
+    text-align: center;
+    margin: 30px;
+}
+
+.Thechizos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .Thechizos div {
+    flex: 1 0 20%;
+    white-space: normal;
+  }
+  p.echiS{
+    font-size: 20px;
+  }
+
+  .botonsE {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 20px;
+  }
+  div.botonsE > button{
+    font-size: 30px;
+   
+  }
 
 .floatingwindow {
     display: none;
     position: fixed;
     top: 20%;
-    left: 80%;
+    left: 86%;
     transform: translate(-50%, -50%);
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    background-color: rgba(163, 223, 223, 0.744);
+   
+
     
+  }
+  p.finestra{
+    font-size: 15px;
+  }
+  h1.harry{
+    font-size: 90px;
+    padding: 200px;
+    background-image: url(/harry.jpg);
+    color:aliceblue;
   }
   
   .floatingwindow.active {
     display: block;
   }
-/* ___________________________________________________________________________________________________________ */
-
 div.destacar{
     font-size: 100px;
 }
-body{
-    text-align: center;
+body.body{
+    
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 
-
-
-/* h1.PR{
-    color: red;
-} */
 h2.personatje{
-    color: rgb(28, 28, 228);
+    color: rgb(79, 79, 101);
     font-size: 50px;
 }
 
@@ -41,13 +78,21 @@ div.casas {
     grid-template-columns: 2fr 2fr; 
     gap: 10px; 
     width: 100%;
+    height: 400px;
     background-color: transparent;
     align-items: center;
+    border-top: 2px solid purple; 
+ color: rgb(105, 206, 42);
+ margin-bottom: 530px;
 }
 
-
+h2.tituloH{
+    border-top: 2px solid purple;
+    font-size: 40px;
+}
 div.casas > div {
    width: 100%;
+   height: 400px;
    
 } 
 
@@ -56,6 +101,7 @@ div.casas > div {
     background-size: auto 70%;
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
     
     
    
@@ -66,6 +112,7 @@ div.casas > div {
     background-size: auto 70%;
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
    
 }
 
@@ -74,6 +121,7 @@ div.casas > div {
     background-size: auto 70%;
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
 }
 
 .Slytherin {
@@ -81,6 +129,7 @@ div.casas > div {
     background-size: auto 70%;
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
    
 }
 
@@ -118,21 +167,38 @@ div.casas > div {
     background: transparent;
     font-size: 15px;
 }
-
+h1.echizos{
+    border-top: 2px solid purple;
+  padding-top: 10px; 
+}
 p{
     color: rgb(212, 152, 78);
+    font-size: 30px;
+}
+p.ingredients{
+    color: rgb(212, 152, 78);
+    font-size: 20px;
+}
+h1.PR{
+    text-align: center;
+}
+div.destacar{
+    text-align: center;
 }
 div.personatje{
     margin-top: 10px;
     margin-bottom: 1000px;
     
 }
+div.pers{
+    text-align: center;
+}
 
 
 @media screen and (max-width: 700px) {
     div.casas {
         display: grid;
-        grid-template-columns: 1fr; /* Una fila con cuatro columnas */
+        grid-template-columns: 1fr; 
         gap: 10px; 
         width: 300px;
         height: 500px;
